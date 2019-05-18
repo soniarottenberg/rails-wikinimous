@@ -1,0 +1,17 @@
+<div class="navbar bg-light">
+  <div class="navbar-band">
+    <a href="#" id="wiki">Wikinimous</a>
+  </div>
+  <div class="navbar-brand btn btn-primary" id="new-article">
+    <%= link_to %>
+    <i class="fas fa-plus"></i>New article
+  </div>
+</div>
+<div class="container">
+  <ul class="list-group list-group-flush">
+    <% @articles.each do |article| %>
+      <li class="list-group-item"><%= link_to article.title, article_path(article) %></li>
+    <% end %>
+  </div>
+</div>
+
